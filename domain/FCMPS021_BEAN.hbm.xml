@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE hibernate-mapping
+
+    PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+<!-- 
+    Created by the Middlegen Hibernate plugin 2.1
+
+    http://boss.bekk.no/boss/middlegen/
+    http://www.hibernate.org/
+-->
+
+<class 
+    name="fcmps.domain.FCMPS021_BEAN" 
+    table="FCMPS021"
+>
+ 
+     <composite-id name="FCMPS021Pk" class="fcmps.domain.pk.FCMPS021Pk">
+            <key-property name="PROCID"/>
+            <key-property name="WORK_WEEK"/>
+            <key-property name="OD_PONO1"/>
+            <key-property name="SH_NO"/> 
+            <key-property name="SH_SIZE"/>
+            <key-property name="SH_COLOR"/>                         
+    </composite-id> 
+        
+    <property
+        name="PROCID"
+        type="java.lang.String"
+        column="PROCID"
+        not-null="true"
+        update="false"
+        insert="false"
+        length="3"
+    />
+    
+    <property
+        name="WORK_WEEK"
+        type="java.lang.Integer"
+        column="WORK_WEEK"
+        not-null="true"
+        update="false"
+        insert="false"
+        length="4"
+    />
+    
+    <property
+        name="OD_PONO1"
+        type="java.lang.String"
+        column="OD_PONO1"
+        not-null="true"
+        update="false"
+        insert="false"
+        length="20"
+    />
+
+    <property
+        name="SH_NO"
+        type="java.lang.String"
+        column="SH_NO"
+        not-null="true"
+        update="false"
+        insert="false"
+        length="25"
+    />        
+    
+    <property
+        name="SH_SIZE"
+        type="java.lang.String"
+        column="SH_SIZE"
+        not-null="true"
+        update="false"
+        insert="false"
+        length="4"
+    />    
+    
+    <property
+        name="SH_COLOR"
+        type="java.lang.String"
+        column="SH_COLOR"
+        not-null="true"
+        update="false"
+        insert="false"
+        length="4"
+    />            
+        
+    <property
+        name="PROC_SEQ"
+        type="java.lang.Double"
+        column="PROC_SEQ"
+        not-null="true"
+        length="4"
+    /> 
+
+    <property
+        name="OD_QTY"
+        type="java.lang.Double"
+        column="OD_QTY"
+        not-null="true"
+        length="10"
+    /> 
+    
+    <property
+        name="WORK_PLAN_QTY"
+        type="java.lang.Double"
+        column="WORK_PLAN_QTY"
+        not-null="true"
+        length="10"
+    />    
+          
+    <property
+        name="STYLE_NO"
+        type="java.lang.String"
+        column="STYLE_NO"
+        not-null="true"
+        length="7"
+    />
+        
+    <property
+        name="FA_NO"
+        type="java.lang.String"
+        column="FA_NO"
+        length="5"
+    />
+            
+    <property
+        name="UP_USER"
+        type="java.lang.String"
+        column="UP_USER"
+        length="10"
+    />        
+        
+    <property
+        name="UP_DATE"
+        type="java.util.Date"
+        column="UP_DATE"
+    />
+
+    <property
+        name="SIZE_CAP_QTY"
+        type="java.lang.Double"
+        column="SIZE_CAP_QTY"
+        not-null="false"
+        length="10"
+    />
+
+    <property
+        name="SH_CAP_QTY"
+        type="java.lang.Double"
+        column="SH_CAP_QTY"
+        not-null="true"
+        length="10"
+    />
+    
+    <property
+        name="SHARE_SH_NO"
+        type="java.lang.String"
+        column="SHARE_SH_NO"
+        length="25"
+    />
+
+    <property
+        name="SHARE_SIZE"
+        type="java.lang.String"
+        column="SHARE_SIZE"
+        length="4"
+    />
+
+    <property
+        name="NEED_SHOOT"
+        type="java.lang.String"
+        column="NEED_SHOOT"
+        length="1"
+    />
+    
+    <!-- Associations -->
+</class>
+</hibernate-mapping>

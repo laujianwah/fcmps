@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE hibernate-mapping
+
+    PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+<!-- 
+    Created by the Middlegen Hibernate plugin 2.1
+
+    http://boss.bekk.no/boss/middlegen/
+    http://www.hibernate.org/
+-->
+
+<class 
+    name="fcmps.domain.FCMPS010_BEAN" 
+    table="FCMPS010"
+>
+
+    <composite-id name="FCMPS010Pk" class="fcmps.domain.pk.FCMPS010Pk">
+            <key-property name="PROCID"/>
+            <key-property name="FA_NO"/>
+            <key-property name="OD_PONO1"/>
+            <key-property name="SH_NO"/> 
+            <key-property name="SH_SIZE"/>
+            <key-property name="SH_COLOR"/>                         
+    </composite-id>    
+
+    <property
+        name="PROCID"
+        type="java.lang.String"
+        column="PROCID"
+        not-null="true"
+        update="false"
+        insert="false"        
+        length="3"
+    />
+    
+    <property
+        name="FA_NO"
+        type="java.lang.String"
+        column="FA_NO"
+        not-null="true"
+        update="false"
+        insert="false"              
+        length="5"
+    />
+    
+    <property
+        name="OD_PONO1"
+        type="java.lang.String"
+        column="OD_PONO1"
+        not-null="true"
+        update="false"
+        insert="false"        
+        length="20"
+    />
+
+    <property
+        name="SH_NO"
+        type="java.lang.String"
+        column="SH_NO"
+        not-null="true"
+        update="false"
+        insert="false"        
+        length="25"
+    />        
+    
+    <property
+        name="SH_SIZE"
+        type="java.lang.String"
+        column="SH_SIZE"
+        not-null="true"
+        update="false"
+        insert="false"        
+        length="4"
+    />    
+    
+    <property
+        name="SH_COLOR"
+        type="java.lang.String"
+        column="SH_COLOR"        
+        not-null="true"
+        update="false"
+        insert="false"        
+        length="25"
+    />    
+    
+    <property
+        name="PROC_SEQ"
+        type="java.lang.Double"
+        column="PROC_SEQ"
+        not-null="true"
+        length="4"
+    /> 
+
+    <property
+        name="OD_QTY"
+        type="java.lang.Double"
+        column="OD_QTY"
+        not-null="true"
+        length="10"
+    /> 
+    
+    <property
+        name="WORK_PLAN_QTY"
+        type="java.lang.Double"
+        column="WORK_PLAN_QTY"
+        not-null="true"
+        length="10"
+    />    
+          
+    <property
+        name="EXPECT_PLAN_QTY"
+        type="java.lang.Double"
+        column="EXPECT_PLAN_QTY"
+        not-null="true"
+        length="10"
+    />          
+          
+    <property
+        name="REPLACED_QTY"
+        type="java.lang.Double"
+        column="REPLACED_QTY"
+        not-null="true"
+        length="10"
+    />
+              
+    <property
+        name="STYLE_NO"
+        type="java.lang.String"
+        column="STYLE_NO"
+        not-null="true"
+        length="7"
+    />        
+            
+    <property
+        name="UP_USER"
+        type="java.lang.String"
+        column="UP_USER"
+        length="10"
+    />        
+        
+    <property
+        name="UP_DATE"
+        type="java.util.Date"
+        column="UP_DATE"
+    />
+
+    <property
+        name="OD_SHIP"
+        type="java.util.Date"
+        not-null="true"        
+        column="OD_SHIP"
+    />
+
+    <property
+        name="OD_FGDATE"
+        type="java.util.Date"
+        column="OD_FGDATE"
+    />
+
+    <property
+        name="WORK_WEEK_END"
+        type="java.lang.Integer"
+        column="WORK_WEEK_END"
+        not-null="true"        
+        length="4"
+    />
+
+    <property
+        name="WORK_WEEK_START"
+        type="java.lang.Integer"
+        column="WORK_WEEK_START"
+        not-null="true"
+        length="4"
+    />
+    
+    <property
+        name="WORK_WEEKS"
+        type="java.lang.Double"
+        column="WORK_WEEKS"
+        not-null="true"
+        length="5"
+    />       
+    
+    <property
+        name="MD_PAIR_QTY"
+        type="java.lang.Double"
+        column="MD_PAIR_QTY"
+        length="8"
+    /> 
+
+    <property
+        name="WORK_DAYS"
+        type="java.lang.Double"
+        column="WORK_DAYS"
+        length="5"
+    />
+
+    <property
+        name="IS_DISABLE"
+        type="java.lang.String"
+        column="IS_DISABLE"
+        length="1"
+    /> 
+          
+    <property
+        name="OD_CODE"
+        type="java.lang.String"
+        column="OD_CODE"
+        length="1"
+    /> 
+
+    <property
+        name="LEAN_NO"
+        type="java.lang.String"
+        column="LEAN_NO"
+        length="12"
+    /> 
+
+    <property
+        name="KPR"
+        type="java.lang.String"
+        column="KPR"
+        length="1"
+    /> 
+            
+    <property
+        name="E1_PO"
+        type="java.lang.String"
+        column="E1_PO"
+        length="20"
+    />            
+                  
+    <property
+        name="IS_REPLACEMENT"
+        type="java.lang.String"
+        column="IS_REPLACEMENT"
+        length="1"
+    />
+    
+    <property
+        name="PO_TYPE"
+        type="java.lang.String"
+        column="PO_TYPE"
+        length="4"
+    />    
+                                
+    <!-- Associations -->
+</class>
+</hibernate-mapping>
